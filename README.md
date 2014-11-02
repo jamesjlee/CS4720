@@ -1,5 +1,4 @@
 CS4720
-<<<<<<< HEAD
 =========
 
 Web Projects - Magic: The Gathering Cube Tracking Website
@@ -14,8 +13,3 @@ Web Projects - Magic: The Gathering Cube Tracking Website
 Raspberry Pi
 =============
 1. rpims3 - An android application that consumes a web service which controls LEDs connected to the Raspberry Pi.
-=======
-======
-
-Web &amp; Mobile Homework
->>>>>>> 2fa0f91e1ea044bea09ff3407a8f6f70a0ccc64c
