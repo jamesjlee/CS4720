@@ -1,0 +1,195 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+
+    <TextView android:text="IP Address:" android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:id="@+id/lblIp" />
+
+    <EditText
+        android:layout_width="450dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/ipInput"
+        android:layout_alignParentTop="true"
+        android:singleLine="true"
+        android:inputType="textNoSuggestions"
+        android:layout_toEndOf="@+id/lblIp" />
+
+    <TextView
+        android:text="Light id:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:id="@+id/lblLightId"
+        android:layout_below="@+id/ipInput"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="450dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/lightIdInput"
+        android:singleLine="true"
+        android:inputType="textNoSuggestions"
+        android:layout_toEndOf="@+id/lblLightId"
+        android:layout_alignTop="@+id/lblLightId" />
+
+    <TextView
+        android:text="Red:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:id="@+id/lblRed"
+        android:layout_below="@+id/lightIdInput"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="450dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/redInput"
+        android:singleLine="true"
+        android:inputType="textNoSuggestions"
+        android:layout_toEndOf="@+id/lblRed"
+        android:layout_below="@+id/lightIdInput" />
+
+    <TextView
+        android:text="Blue:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:id="@+id/lblBlue"
+        android:layout_below="@+id/redInput"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="450dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/blueInput"
+        android:singleLine="true"
+        android:inputType="textNoSuggestions"
+        android:layout_toEndOf="@+id/lblBlue"
+        android:layout_below="@+id/redInput" />
+
+    <TextView
+        android:text="Green:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:id="@+id/lblGreen"
+        android:layout_below="@+id/blueInput"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="450dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/greenInput"
+        android:singleLine="true"
+        android:inputType="textNoSuggestions"
+        android:layout_toEndOf="@+id/lblBlue"
+        android:layout_below="@+id/blueInput"
+        android:layout_alignStart="@+id/lightIdInput" />
+
+    <TextView
+        android:text="Intensity:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:id="@+id/lblIntensity"
+        android:layout_below="@+id/greenInput"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="450dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/intensityInput"
+        android:singleLine="true"
+        android:inputType="textNoSuggestions"
+        android:layout_toEndOf="@+id/lblBlue"
+        android:layout_alignTop="@+id/lblIntensity"
+        android:layout_alignStart="@+id/ipInput" />
+
+    <TextView
+        android:text="Propagate:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:id="@+id/lblPropagate"
+        android:layout_below="@+id/intensityInput"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="450dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/propagateInput"
+        android:singleLine="true"
+        android:inputType="textNoSuggestions"
+        android:layout_toEndOf="@+id/lblIp"
+        android:layout_below="@+id/intensityInput" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Post"
+        android:id="@+id/postButton"
+        android:layout_toEndOf="@+id/blue"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:text="test"
+        android:id="@+id/test"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/propagateInput"
+        android:layout_alignParentBottom="true" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="All Red"
+        android:id="@+id/red"
+        android:layout_below="@+id/propagateInput"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="29dp" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="All Green"
+        android:id="@+id/green"
+        android:layout_toEndOf="@+id/lblIntensity"
+        android:layout_alignTop="@+id/red" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="All Blue"
+        android:id="@+id/blue"
+        android:layout_alignTop="@+id/green"
+        android:layout_toStartOf="@+id/postButton" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="All Orange"
+        android:id="@+id/orange"
+        android:layout_alignTop="@+id/blue"
+        android:layout_toEndOf="@+id/blue"
+        android:layout_marginLeft="29dp" />
+
+</RelativeLayout>

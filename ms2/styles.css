@@ -1,0 +1,99 @@
+body {
+	font-family: proxima-nova, "Gloria Hallelujah", "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
+	margin-left: 0;
+	margin-top: 85px;
+	margin-bottom: 80px;
+	background-color: #E0E0E0;
+}
+
+header {
+	font-family: inherit;
+	text-align: center;
+	background-color: #181818;
+	position:fixed;
+	margin: 0;
+	top: 0;
+	width: 100%;
+	color: #FFA500;
+}
+
+footer {
+	font-family: inherit;
+	text-align: center;
+	background-color: #181818;
+	position: fixed;
+	color: #FFA500;
+	bottom: 0;
+	width: 100%;
+}
+
+footer a:link {
+	color: white;	
+}
+
+a:hover {
+	color: #FFFF00;
+}
+
+#description {
+	display: inline-block;
+	width: 30%;
+	word-wrap: break-word;
+	float: left;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+#media {
+	display: inline-block;
+	width: 65%;
+	word-wrap: break-word;
+	float: left;
+	margin-right: 5px;
+}
+
+#vid {
+	width: 600px;
+	height: 450px;
+	float: left;
+	margin-right: 20px;
+}
+
+/*ul.gallery li a:hover img {*/
+#blackLotus, #chandra {
+	width: 223px;
+	height: 310px;
+	float: left;
+	margin-right: 20px;
+	
+}
+
+#blackLotus:hover {
+	-webkit-transform:scale(1.25);
+	-moz-transform:scale(1.25);
+	transform:scale(1.25);
+	box-shadow: 4px 4px 10px rgba(0,0,0,0.5);
+}
+
+#chandra:hover {
+	-webkit-transition-duration: 0.8s;
+	-moz-transition-duration: 0.8s;
+	-o-transition-duration: 0.8s;
+	transition-duration: 0.8s;    
+	-webkit-transition-property: -webkit-transform;
+	-moz-transition-property: -moz-transform;
+	-o-transition-property: -o-transform;
+	transition-property: transform;
+	-webkit-transform:rotate(360deg);
+	-ms-transform: rotate(360deg);
+	transform: rotate(360deg);
+	box-shadow: 4px 4px 10px rgba(0,0,0,0.5);
+}
+
+#aud {
+	position:fixed;
+	bottom: 0;
+	left: 0;
+	margin-bottom: 90px;
+	margin-left: 20px;
+}

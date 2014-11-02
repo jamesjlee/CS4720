@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="">
+		<meta name="author" content="">
+
+		<title>Magic: The Gathering Card Tracker</title>
+
+		<!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+
+		<!-- Custom CSS -->
+		<link href="css/styles.css" rel="stylesheet">
+
+		<!-- Custom Fonts -->
+		<link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+		<link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+		<link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+				<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+				<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+
+</head>
+
+<body id="page-top" class="index">
+
+		<!-- Navigation -->
+		<nav class="navbar navbar-default navbar-fixed-top">
+				<div class="container">
+						<!-- Brand and toggle get grouped for better mobile display -->
+						<div class="navbar-header page-scroll">
+								<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+										<span class="sr-only">Toggle navigation</span>
+										<span class="icon-bar"></span>
+										<span class="icon-bar"></span>
+										<span class="icon-bar"></span>
+								</button>
+								<a class="navbar-brand" href="#page-top">Magic: The Gathering Cube Tracker</a>
+						</div>
+
+						<!-- Collect the nav links, forms, and other content for toggling -->
+						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+								<ul class="nav navbar-nav navbar-right">
+										<li class="hidden">
+												<a href="#page-top"></a>
+										</li>
+										<li class="page-scroll">
+												<a href="#about">About</a>
+										</li>
+										<li class="page-scroll">
+												<a href="#cube">Cube</a>
+										</li>
+								</ul>
+						</div>
+						<!-- /.navbar-collapse -->
+				</div>
+				<!-- /.container-fluid -->
+		</nav>
+
+		<!-- Header top of the page -->
+		<header>
+			<div id="tip">
+				<h4>Drag elements into place for a surprise!</h4>
+			</div>
+			<div id="black" class="ui-widget-content">
+				<img src="//plato.cs.virginia.edu/~jjl9ve/ms3/img/black.png" alt="" title="Drag elements into place for a surprise!">
+			</div>
+			<div id="white" class="ui-widget-content">
+				<img src="//plato.cs.virginia.edu/~jjl9ve/ms3/img/white.png" alt="" title="Drag elements into place for a surprise!">
+			</div>
+			<div id="blue" class="ui-widget-content">
+				<img src="//plato.cs.virginia.edu/~jjl9ve/ms3/img/blue.png" alt="" title="Drag elements into place for a surprise!">
+			</div>
+			<div id="green" class="ui-widget-content">
+				<img src="//plato.cs.virginia.edu/~jjl9ve/ms3/img/green.png" alt="" title="Drag elements into place for a surprise!">
+			</div>
+			<div id="red" class="ui-widget-content">
+				<img src="//plato.cs.virginia.edu/~jjl9ve/ms3/img/red.png" alt="" title="Drag elements into place for a surprise!">
+			</div>
+
+			<div id="dropEle1">
+			</div>
+			<div id="dropEle2">
+			</div>
+			<div id="dropEle3">
+			</div>
+			<div id="dropEle4">
+			</div>
+			<div id="dropEle5">
+			</div>
+
+			<div id="surprise">
+				<audio controls="controls" id="magicSoundTrack">
+					<source src="https://ia601401.us.archive.org/35/items/magic_201409/magic.mp3" type="audio/mpeg">
+				</audio>
+			</div>
+		</header>
+
+		<!-- About Section -->
+		<section class="success" id="about">
+				<div class="container">
+						<div class="row">
+								<div class="col-lg-12 text-center">
+										<h2>About</h2>
+								</div>
+						</div>
+						<div class="row">
+								<div class="col-lg-4 col-lg-offset-2">
+										<p>Magic: The Gathering is an extremely popular trading card game published by the Wizards of the Coast. It's somewhat similar to the recently popular Blizzard card game, Hearthstone; however, I believe that Magic allows for more creativity and strategy due to the sheer amount of cards available. The official website for MTG can be found <a href="http://magic.wizards.com/">here</a>. For my CS4720 website project, I will attempt to create a website that tracks the cards in my Magic: The Gathering Cube. </p>
+										<p>A cube is basically a collection of 360+ Magic cards which you use to draft with friends. I will be building a Magic: The Gathering cube for the first time with my floormates, and I will use my website to keeps track of the cards in cube. Here's some information about <a href="http://archive.wizards.com/Magic/magazine/article.aspx?x=mtg/daily/li/272">drafting</a> and the <a href="http://www.tomlapille.com/cube/cube.html">cube</a>.</p>
+								</div>
+								<div class="col-lg-4">
+										<p><strong>Desired Functionality</strong></p>
+										<ul id="functionality">
+											<li>Add cards to the Cube.</li>
+											<li>Remove cards from the Cube.</li>
+											<li>Search for specific cards in the Cube by name.</li>
+											<li>Categorize cards based on mana color and/or mana cost.</li>
+											<li>View all cards in the Cube.</li>
+										</ul>
+								</div>
+						</div>
+				</div>
+		</section>
+
+		<!-- Portfolio Grid Section -->
+		<section id="cube">
+				<div class="container" id="cubeWrap">
+						<div class="row">
+								<div class="col-lg-12 text-center">
+										<h2>Cube</h2>
+								</div>
+						</div>
+						<table class="table table-hover" id="myTable">
+								<tbody id="myCube">
+								</tbody>
+						</table>
+						<button type="button" class="btn btn-default" data-toggle="modal" data-target="#addCardModal">Add a Card</button>
+						<button type="button" class="btn btn-default" data-toggle="modal" data-target="#deleteCardModal">Delete a Card</button>
+						<button type="button" class="btn btn-default" data-toggle="modal" data-target="#commentsModal">Modify Comments</button>
+						<!-- <button type="button" class="btn btn-default" id="calcCount">Card Count</button> -->
+						<div id="count"></div>
+				</div>
+		</section>
+
+		<!-- Footer -->
+		<footer class="text-center">
+				<div class="footer-above">
+						<div class="container">
+								<div class="row">
+										<div class="footer-col col-md-4">
+												<h3>Contact Me</h3>
+												<p>Email: <a href="mailto:jjl9ve@virginia.edu">jjl9ve@virginia.edu</a></p>
+										</div>
+										<div class="footer-col col-md-4">
+												<h3>Around the Web</h3>
+												<ul class="list-inline">
+														<li>
+																<a href="//github.com/jamesjlee" class="btn-social btn-outline"><i class="fa fa-fw fa-github"></i></a>
+														</li>
+														<li>
+																<a href="//linkedin.com/in/jamesjlee8" class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin"></i></a>
+														</li>
+														<li>
+																<a href="//plus.google.com/113502061889985148153" class="btn-social btn-outline"><i class="fa fa-fw fa-google-plus"></i></a>
+														</li>
+												</ul>
+										</div>
+										<div class="footer-col col-md-4">
+												<h3>About Freelancer</h3>
+												<p>Freelance is a free to use, open source Bootstrap theme created by <a href="http://startbootstrap.com">Start Bootstrap</a>. This page was created by modifying <a href="http://startbootstrap.com/template-overviews/freelancer/">the Start Bootstrap - Freelancer Bootstrap Theme</a>. Code licensed under the Apache License v2.0. For details, see <a href="http://www.apache.org/licenses/LICENSE-2.0">the apache license</a>.</p>
+								</div>
+						</div>
+				</div>
+				<div class="footer-below">
+						<div class="container">
+								<div class="row">
+										<div class="col-lg-12">
+												Copyright &copy; James Lee 2014
+										</div>
+								</div>
+						</div>
+				</div>
+			</div>
+	</footer>
+
+		<!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+		<div class="scroll-top page-scroll visible-xs visble-sm">
+				<a class="btn btn-primary" href="#page-top">
+						<i class="fa fa-chevron-up"></i>
+				</a>
+		</div>
+
+		<!-- Modals -->
+		<div class="modal fade" id="addCardModal" tabindex="-1" role="dialog" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="color:#000000">&times;</button>
+						<h4 class="modal-title">MTG Cube: Add a card</h4>
+					</div>
+
+					<div class="modal-body">
+						<div class="form-group">
+							<label class="col-md-3 control-label" id="cardNameLbl" for="cardName">Card Name</label>
+							<input type="text" class="form-control" name="cardName" id="cardName" placeholder="Enter card name">
+						</div>
+					</div>
+
+					<div class="modal-footer">
+							<button type="submit" class="btn btn-default" id="addCard">Add</button>
+							<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal fade" id="deleteCardModal" tabindex="-1" role="dialog" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="color:#000000">&times;</button>
+						<h4 class="modal-title">MTG Cube: Delete a card</h4>
+					</div>
+
+					<div class="modal-body">
+						<div class="form-group">
+							<label class="col-md-3 control-label" id="delCardNameLbl" for="delCardName">Card Name</label>
+							<input type="text" class="form-control" name="delCardName" id="delCardName" placeholder="Enter card name">
+						</div>
+					</div>
+
+					<div class="modal-footer">
+							<button type="submit" class="btn btn-default" id="deleteCard">Delete</button>
+							<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal fade" id="commentsModal" tabindex="-1" role="dialog" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="color:#000000">&times;</button>
+						<h4 class="modal-title">MTG Cube: Delete a card</h4>
+					</div>
+
+					<div class="modal-body">
+						<div class="form-group">
+							<label class="col-md-3 control-label" id="commentsCardNameLbl" for="commentsCardName">Card Name</label>
+							<input type="text" class="form-control" name="commentsCardName" id="commentsCardName" placeholder="Enter card name">
+							<label class="col-md-3 control-label" id="commentsLbl" for="comments">Comments</label>
+							<input type="text" class="form-control" name="comments" id="comments" placeholder="Enter any comments for this card">
+						</div>
+					</div>
+
+					<div class="modal-footer">
+							<button type="submit" class="btn btn-default" id="modifyComments">Modify</button>
+							<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<!-- jQuery Version 1.11.0 -->
+		<script src="js/jquery-1.11.0.js"></script>
+
+		<!-- Bootstrap Core JavaScript -->
+		<script src="js/bootstrap.min.js"></script>
+
+		<!-- Plugin JavaScript -->
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+		<script src="https://code.jquery.com/ui/1.11.1/jquery-ui.min.js"></script>
+		<script src="js/classie.js"></script>
+		<script src="js/cbpAnimatedHeader.js"></script>
+
+		<!-- Contact Form JavaScript -->
+		<script src="js/jqBootstrapValidation.js"></script>
+		<script src="js/contact_me.js"></script>
+
+		<!-- Custom Theme JavaScript -->
+		<script src="js/freelancer.js"></script>
+
+		<script>
+			$(document).ready(function() {
+				var count = 0;
+				var droppedEle1 = false;
+				var droppedEle2 = false;
+				var droppedEle3 = false;
+				var droppedEle4 = false;
+				var droppedEle5 = false;
+
+				$('#black').draggable();
+				$('#white').draggable();
+				$('#green').draggable();
+				$('#red').draggable();
+				$('#blue').draggable();
+
+				$('#dropEle1').droppable({
+					tolerance: "touch",
+					drop: function(event, ui) {
+						droppedEle1 = true;
+						if (droppedEle5 == true && droppedEle4 == true && droppedEle3 == true && droppedEle2 == true && droppedEle1 == true) {
+							$('#surprise').css({"visibility":"visible"});
+							$('#tip').css({"display": "none"});
+							$('#magicSoundTrack').trigger('play');
+						}
+					}
+				});
+
+				$('#dropEle2').droppable({
+					tolerance: "touch",
+					drop: function(event, ui) {
+						droppedEle2 = true;
+						if (droppedEle5 == true && droppedEle4 == true && droppedEle3 == true && droppedEle2 == true && droppedEle1 == true) {
+							$('#surprise').css({"visibility":"visible"});
+							$('#tip').css({"display": "none"});
+							$('#magicSoundTrack').trigger('play');
+						}
+					}
+				});
+
+				$('#dropEle3').droppable({
+					tolerance: "touch",
+					drop: function(event, ui) {
+						droppedEle3 = true;
+						if (droppedEle5 == true && droppedEle4 == true && droppedEle3 == true && droppedEle2 == true && droppedEle1 == true) {
+							$('#surprise').css({"visibility":"visible"});
+							$('#tip').css({"display": "none"});
+							$('#magicSoundTrack').trigger('play');
+						}
+					}
+				});
+
+				$('#dropEle4').droppable({
+					tolerance: "touch",
+					drop: function(event, ui) {
+						droppedEle4 = true;
+						if (droppedEle5 == true && droppedEle4 == true && droppedEle3 == true && droppedEle2 == true && droppedEle1 == true) {
+							$('#surprise').css({"visibility":"visible"});
+							$('#tip').css({"display": "none"});
+							$('#magicSoundTrack').trigger('play');
+						}
+					}
+				});
+
+				$('#dropEle5').droppable({
+					tolerance: "touch",
+					drop: function(event, ui) {
+						droppedEle5 = true;
+						if (droppedEle5 && droppedEle4 && droppedEle3 && droppedEle2 && droppedEle1 == true) {
+							$('#surprise').css({"visibility":"visible"});
+							$('#tip').css({"display": "none"});
+							$('#magicSoundTrack').trigger('play');
+						}
+					}
+				});
+
+				$.get('getData.php', function(data) {
+					$("#myCube").html(data);
+				});
+
+				$('#addCardModal').click(function () {
+					$("#cardName").val("");
+				});
+				
+				$('#addCard').click(function() {
+					if ($("#cardName").val()) {
+						var trimmed = $("#cardName").val().replace(/\s+/g, '');
+						$(".form-group").removeClass("form-group has-error has-feedback").addClass("form-group");
+						count++;
+						$.ajax({
+							url: 'addCard.php',
+							data: {trimmedCardName: trimmed},
+							success: function(data) {
+								$("#myCube").html(data);
+							}
+						})
+						$("#addCardModal").modal('hide');
+					}
+					else {
+						$(".form-group").removeClass("form-group").addClass("form-group has-error has-feedback");
+					}
+				});
+
+				$('#deleteCardModal').click(function () {
+					$("#delCardName").val("");
+				});
+				
+				$('#deleteCard').click(function() {
+					if ($("#delCardName").val()) {
+						var trimmed = $("#delCardName").val().replace(/\s+/g, '');
+						$(".form-group").removeClass("form-group has-error has-feedback").addClass("form-group");
+						$.ajax({
+							url: 'deleteCard.php',
+							data: {trimmedCardName: trimmed},
+							success: function(data) {
+								$("#myCube").html(data);
+							}
+						})
+						$("#deleteCardModal").modal('hide');
+					}
+					else {
+						$(".form-group").removeClass("form-group").addClass("form-group has-error has-feedback");
+					}
+				});
+
+				$('#commentsModal').click(function () {
+					$("#commentsCardName").val("");
+					$("#comments").val("");
+				});
+				
+				$('#modifyComments').click(function() {
+					if ($("#commentsCardName").val()) {
+						var trimmed = $("#commentsCardName").val().replace(/\s+/g, '');
+						var comments = $("#comments").val();
+						$(".form-group").removeClass("form-group has-error has-feedback").addClass("form-group");
+						$.ajax({
+							url: 'cardComments.php',
+							data: {comments: comments, trimmedCardName: trimmed},
+							success: function(data) {
+								$("#myCube").html(data);
+							}
+						})
+						$("#commentsModal").modal('hide');
+					}
+					else {
+						$(".form-group").removeClass("form-group").addClass("form-group has-error has-feedback");
+					}
+				});
+
+
+
+
+				// $("#calcCount").click(function(){
+				// 	var cubeCount = parseInt(document.getElementById("myCube").rows.length.toString());
+				// 	$.ajax({
+				// 		url: 'count.php',
+				// 		data: {cubeCount: cubeCount, count: count},
+				// 		success: function(data) {
+				// 			$('#count').html(data);
+				// 		}
+				// 	})
+				// });
+			});
+		</script>
+</body>
+</html>
