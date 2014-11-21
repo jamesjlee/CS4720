@@ -1,0 +1,60 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
+    android:background="#34495e">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TriPi"
+        android:id="@+id/title"
+        android:textSize="100dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="42dp"
+        android:textColor="#ecf0f1"
+        android:typeface="sans" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="How to Play"
+        android:id="@+id/howtoplay"
+        android:textColor="#ecf0f1"
+        android:height="80dp"
+        android:width="300dp"
+        android:textSize="50dp"
+        android:typeface="sans"
+        android:layout_above="@+id/settings"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start"
+        android:id="@+id/startButt"
+        android:layout_above="@+id/howtoplay"
+        android:layout_centerHorizontal="true"
+        android:textColor="#ecf0f1"
+        android:typeface="sans"
+        android:height="80dp"
+        android:width="200dp"
+        android:textSize="50dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Settings"
+        android:id="@+id/settings"
+        android:textColor="#ecf0f1"
+        android:typeface="sans"
+        android:height="80dp"
+        android:width="210dp"
+        android:textSize="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignEnd="@+id/title" />
+
+</RelativeLayout>
