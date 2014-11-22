@@ -268,7 +268,9 @@ public class gameActivity extends Activity implements SensorEventListener {
                             break;
                     }       
                 } else {
-                    //while(abs(event.values[0]) + abs(event.values[1]) + abs(event.values[2]) > sensitivityFloor);
+                    if(abs(event.values[0]) + abs(event.values[1]) + abs(event.values[2]) < sensitivityFloor){
+                        wait = true;
+                    }
                 }
             }
         }
