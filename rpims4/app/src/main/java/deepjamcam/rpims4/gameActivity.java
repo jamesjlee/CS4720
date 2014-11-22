@@ -51,7 +51,8 @@ public class gameActivity extends Activity implements SensorEventListener {
     public float currZ = 0;
     public boolean wait = true;
     public int sleepTime = 500;
-    public int sensitivity = 10;
+    public int sensitivityRoof = 14;
+    public int sensitivityFloor = 7;
     public JSONObject jsonObj = new JSONObject();
     public JSONArray lightsArr = new JSONArray();
     public ArrayList<Integer> lightArray = new ArrayList<Integer>();
@@ -165,70 +166,110 @@ public class gameActivity extends Activity implements SensorEventListener {
             currX = event.values[0];
             currY = event.values[1];
             currZ = event.values[2];
-
-            if(currX > sensitivity && Math.abs(currX) > Math.abs(currY) && wait){
-                wait = false;
-                blueRight.setVisibility(View.VISIBLE);
-                fadedFlat.setVisibility(View.INVISIBLE);
-
-                // SLEEP 1 SECOND HERE ...
-                Handler handler = new Handler();
-                handler.postDelayed(new Runnable() {
-                    public void run() {
-                        blueRight.setVisibility(View.INVISIBLE);
-                        fadedFlat.setVisibility(View.VISIBLE);
-                        wait = true;
-                    }
-                }, sleepTime);
-
+            
+            if(wait){
+                int max = Math.abs(Math.max(currX,currY));
+                String dir = "";
+                if(Math.abs(currX) > Math.abs(currY)){
+                    dir += "x";
+                }else{
+                    dir += "y"
+                }
+                if(max > 0){
+                    dir = "+";
+                }else{
+                    dir = "-";
+                }
+            } else {
+                Switch(dir){
+                    case "y+":
+                        max = currY;
+                        break;
+                        
+                    case "x+":
+                        max = currX;
+                        break;
+                        
+                    case "y-":
+                        max = -currY;
+                        break;
+                        
+                    case "x-":
+                        max = -currX;
+                        break;
+                }
             }
+            
+            if(max > sensitivityFloor){
+                if((Math.sqrt(max*max+currZ*currZ) > sensitivityRoof) && wait){
+                    
+                    Switch(dir){
+                        case "y+": //Device is going left
+                            wait = false;
+                            redLeft.setVisibility(View.VISIBLE);
+                            fadedFlat.setVisibility(View.INVISIBLE);
 
-            if(currX < -1*sensitivity && Math.abs(currX) > Math.abs(currY) && wait){
-                wait = false;
-                redLeft.setVisibility(View.VISIBLE);
-                fadedFlat.setVisibility(View.INVISIBLE);
+                            // SLEEP 1 SECOND HERE ...
+                            Handler handler = new Handler();
+                            handler.postDelayed(new Runnable() {
+                                public void run() {
+                                    redLeft.setVisibility(View.INVISIBLE);
+                                    fadedFlat.setVisibility(View.VISIBLE);
+                                    wait = true;
+                                }
+                            }, sleepTime);
+                            break;
+                            
+                        case "x+": //Device is going up
+                            wait = false;
+                            greenUp.setVisibility(View.VISIBLE);
+                            fadedFlat.setVisibility(View.INVISIBLE);
 
-                // SLEEP 1 SECOND HERE ...
-                Handler handler = new Handler();
-                handler.postDelayed(new Runnable() {
-                    public void run() {
-                        redLeft.setVisibility(View.INVISIBLE);
-                        fadedFlat.setVisibility(View.VISIBLE);
-                        wait = true;
-                    }
-                }, sleepTime);
-            }
+                            // SLEEP 1 SECOND HERE ...
+                            Handler handler = new Handler();
+                            handler.postDelayed(new Runnable() {
+                                public void run() {
+                                    greenUp.setVisibility(View.INVISIBLE);
+                                    fadedFlat.setVisibility(View.VISIBLE);
+                                    wait = true;
+                                }
+                            }, sleepTime);
+                            break;
+                            
+                        case "y-"; //Device is going right
+                            wait = false;
+                            blueRight.setVisibility(View.VISIBLE);
+                            fadedFlat.setVisibility(View.INVISIBLE);
 
-            if(currY > sensitivity && Math.abs(currX) < Math.abs(currY) && wait){
-                wait = false;
-                greenUp.setVisibility(View.VISIBLE);
-                fadedFlat.setVisibility(View.INVISIBLE);
+                            // SLEEP 1 SECOND HERE ...
+                            Handler handler = new Handler();
+                            handler.postDelayed(new Runnable() {
+                                public void run() {
+                                    blueRight.setVisibility(View.INVISIBLE);
+                                    fadedFlat.setVisibility(View.VISIBLE);
+                                    wait = true;
+                                }
+                            }, sleepTime);
+                            break;
+                        case "x-"; //Device is going down
+                            wait = false;
+                            yellowDown.setVisibility(View.VISIBLE);
+                            fadedFlat.setVisibility(View.INVISIBLE);
 
-                // SLEEP 1 SECOND HERE ...
-                Handler handler = new Handler();
-                handler.postDelayed(new Runnable() {
-                    public void run() {
-                        greenUp.setVisibility(View.INVISIBLE);
-                        fadedFlat.setVisibility(View.VISIBLE);
-                        wait = true;
-                    }
-                }, sleepTime);
-            }
-
-            if(currY < -1*sensitivity && Math.abs(currX) < Math.abs(currY) && wait){
-                wait = false;
-                yellowDown.setVisibility(View.VISIBLE);
-                fadedFlat.setVisibility(View.INVISIBLE);
-
-                // SLEEP 1 SECOND HERE ...
-                Handler handler = new Handler();
-                handler.postDelayed(new Runnable() {
-                    public void run() {
-                        yellowDown.setVisibility(View.INVISIBLE);
-                        fadedFlat.setVisibility(View.VISIBLE);
-                        wait = true;
-                    }
-                }, sleepTime);
+                            // SLEEP 1 SECOND HERE ...
+                            Handler handler = new Handler();
+                            handler.postDelayed(new Runnable() {
+                                public void run() {
+                                    yellowDown.setVisibility(View.INVISIBLE);
+                                    fadedFlat.setVisibility(View.VISIBLE);
+                                    wait = true;
+                                }
+                            }, sleepTime);
+                            break;
+                    }       
+                } else {
+                    //while(abs(event.values[0]) + abs(event.values[1]) + abs(event.values[2]) > sensitivityFloor);
+                }
             }
         }
     }

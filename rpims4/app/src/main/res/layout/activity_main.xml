@@ -12,37 +12,23 @@
         android:text="TriPi"
         android:id="@+id/title"
         android:textSize="100dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="42dp"
         android:textColor="#ecf0f1"
-        android:typeface="sans" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="How to Play"
-        android:id="@+id/howtoplay"
-        android:textColor="#ecf0f1"
-        android:height="80dp"
-        android:width="300dp"
-        android:textSize="50dp"
         android:typeface="sans"
-        android:layout_above="@+id/settings"
-        android:layout_centerHorizontal="true" />
+        android:layout_above="@+id/startButt"
+        android:layout_alignStart="@+id/startButt" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Start"
         android:id="@+id/startButt"
-        android:layout_above="@+id/howtoplay"
         android:layout_centerHorizontal="true"
         android:textColor="#ecf0f1"
         android:typeface="sans"
         android:height="80dp"
         android:width="200dp"
-        android:textSize="50dp" />
+        android:textSize="30dp"
+        android:layout_above="@+id/settings" />
 
     <Button
         android:layout_width="wrap_content"
@@ -52,9 +38,35 @@
         android:textColor="#ecf0f1"
         android:typeface="sans"
         android:height="80dp"
-        android:width="210dp"
-        android:textSize="50dp"
+        android:width="200dp"
+        android:textSize="30dp"
         android:layout_alignParentBottom="true"
-        android:layout_alignEnd="@+id/title" />
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Noob?"
+        android:id="@+id/howtoplay"
+        android:textColor="#ecf0f1"
+        android:height="80dp"
+        android:width="200dp"
+        android:textSize="30dp"
+        android:typeface="sans"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="View High Scores"
+        android:id="@+id/viewHighScores"
+        android:textColor="#ecf0f1"
+        android:typeface="sans"
+        android:height="80dp"
+        android:width="200dp"
+        android:textSize="30dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true" />
 
 </RelativeLayout>

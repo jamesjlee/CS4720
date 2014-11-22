@@ -13,10 +13,9 @@ public class MainActivity extends Activity {
 
     public Button startButt;
     public Button howtoplay;
-//    public Button scoreboardButt;
+    public Button scoreboardButt;
     public Button settingsButt;
     private static final String PREFS_NAME = "MyPrefsFile";
-    public String ipAddr;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,7 +25,7 @@ public class MainActivity extends Activity {
 
         startButt = (Button) findViewById(R.id.startButt);
         howtoplay = (Button) findViewById(R.id.howtoplay);
-//        scoreboardButt = (Button) findViewById(R.id.howtoplay);
+        scoreboardButt = (Button) findViewById(R.id.viewHighScores);
         settingsButt = (Button) findViewById(R.id.settings);
 
         startButt.setOnClickListener(new View.OnClickListener(){
@@ -45,15 +44,14 @@ public class MainActivity extends Activity {
             }
         });
 
-
-
-//        scoreboardButt.setOnClickListener(new View.OnClickListener(){
-//            @Override
-//            public void onClick(View v) {
-//
-//            }
-//        });
-//
+        scoreboardButt.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent gameIntent = new Intent(MainActivity.this, HighScores.class);
+                MainActivity.this.startActivity(gameIntent);
+            }
+        });
+        
         settingsButt.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
