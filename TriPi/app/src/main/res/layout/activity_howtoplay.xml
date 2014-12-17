@@ -1,0 +1,68 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="deepjamcam.rpims4.howtoplay"
+    android:background="#34495E">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="How to Play"
+        android:id="@+id/howtoplay_header"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="100dp"
+        android:textColor="#ECF0F1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1) Hold your tablet across from you."
+        android:id="@+id/howtoplay1"
+        android:textSize="25dp"
+        android:textAlignment="center"
+        android:paddingTop="25dp"
+        android:textColor="#ECF0F1"
+        android:layout_below="@+id/howtoplay_header"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2) Move your tablet in the direction of the corresponding color displayed on the Raspberry Pi&apos;s LED strip."
+        android:id="@+id/howtoplay2"
+        android:textSize="25dp"
+        android:textAlignment="center"
+        android:layout_below="@+id/howtoplay1"
+        android:layout_alignParentEnd="true"
+        android:paddingTop="20dp"
+        android:textColor="#ECF0F1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Can you keep up as you climb the leaderboards and earn all the achievements?"
+        android:id="@+id/howtoplay3"
+        android:textSize="25dp"
+        android:textAlignment="center"
+        android:paddingTop="20dp"
+        android:textColor="#ECF0F1"
+        android:layout_below="@+id/howtoplay2"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="To start playing, input your RaspberryPi&apos;s ip address in the settings menu, and make sure your sound is turned up!"
+        android:id="@+id/howtoplay4"
+        android:textSize="25dp"
+        android:textAlignment="center"
+        android:paddingTop="20dp"
+        android:textColor="#ECF0F1"
+        android:layout_below="@+id/howtoplay3"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>
