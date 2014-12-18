@@ -13,3 +13,4 @@ Web Projects - Magic: The Gathering Cube Tracking Website
 Raspberry Pi
 =============
 1. rpims3 - An android application that consumes a web service which controls LEDs connected to the Raspberry Pi.
+2. rpims3/rpims4/TriPi - An android game that interfaces with Raspberry Pi's LEDs. TriPi is the final version of our casual dance game.
