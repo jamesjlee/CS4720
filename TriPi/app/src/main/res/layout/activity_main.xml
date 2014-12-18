@@ -12,6 +12,7 @@
         android:text="TriPi"
         android:id="@+id/title"
         android:textSize="100dp"
+<<<<<<< HEAD:TriPi/app/src/main/res/layout/activity_main.xml
         android:textColor="#ecf0f1"
         android:typeface="sans"
         android:layout_alignParentTop="true"
@@ -31,21 +32,37 @@
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
         android:clickable="true" />
+=======
+        android:textColor="#ecf0f1"
+        android:typeface="sans"
+        android:layout_above="@+id/startButt"
+        android:layout_alignStart="@+id/startButt" />
+>>>>>>> db49286a3545003d8e8acf362768e36abacc538b:rpims4/app/src/main/res/layout/activity_main.xml
 
     <Button
         android:background="@drawable/rounded_corners"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+<<<<<<< HEAD:TriPi/app/src/main/res/layout/activity_main.xml
         android:text="Settings"
         android:id="@+id/settingsButt"
+=======
+        android:text="Start"
+        android:id="@+id/startButt"
+        android:layout_centerHorizontal="true"
+>>>>>>> db49286a3545003d8e8acf362768e36abacc538b:rpims4/app/src/main/res/layout/activity_main.xml
         android:textColor="#ecf0f1"
         android:typeface="sans"
         android:height="80dp"
         android:width="200dp"
         android:textSize="30dp"
+<<<<<<< HEAD:TriPi/app/src/main/res/layout/activity_main.xml
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
         android:clickable="true" />
+=======
+        android:layout_above="@+id/settings" />
+>>>>>>> db49286a3545003d8e8acf362768e36abacc538b:rpims4/app/src/main/res/layout/activity_main.xml
 
     <Button
         android:background="@drawable/rounded_corners"
@@ -59,6 +76,7 @@
         android:width="200dp"
         android:textSize="30dp"
         android:layout_alignParentBottom="true"
+<<<<<<< HEAD:TriPi/app/src/main/res/layout/activity_main.xml
         android:layout_alignParentEnd="true"
         android:clickable="true" />
 
@@ -76,5 +94,34 @@
         android:layout_alignTop="@+id/settingsButt"
         android:layout_centerHorizontal="true"
         android:clickable="true" />
+=======
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Noob?"
+        android:id="@+id/howtoplay"
+        android:textColor="#ecf0f1"
+        android:height="80dp"
+        android:width="200dp"
+        android:textSize="30dp"
+        android:typeface="sans"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="View High Scores"
+        android:id="@+id/viewHighScores"
+        android:textColor="#ecf0f1"
+        android:typeface="sans"
+        android:height="80dp"
+        android:width="200dp"
+        android:textSize="30dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true" />
+>>>>>>> db49286a3545003d8e8acf362768e36abacc538b:rpims4/app/src/main/res/layout/activity_main.xml
 
 </RelativeLayout>
